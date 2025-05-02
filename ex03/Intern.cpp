@@ -17,6 +17,25 @@
 #include "PresidentialPardonForm.hpp"
 #include "Intern.hpp"
 
+Intern::Intern()
+{
+}
+
+Intern::~Intern()
+{
+}
+
+Intern::Intern(const Intern &other)
+{
+	*this = other;
+}
+
+Intern &Intern::operator=(const Intern &other)
+{
+	(void)other;
+	return (*this);
+}
+
 static AForm *createShrubbery(const std::string &target) {
 	return new ShrubberyCreationForm(target);
 }
