@@ -20,7 +20,7 @@
 int	main(void)
 {
     Intern intern;
-    Bureaucrat boss("Michael", 1); 
+    Bureaucrat boss("Aslan", 1); 
 
     std::cout << "===== ShrubberyCreationForm =====" << std::endl;
     AForm* f1 = intern.makeForm("shrubbery creation", "Garden");

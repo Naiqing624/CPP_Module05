@@ -42,7 +42,7 @@ class Form
 			const char *what() const throw();
 	};
 
-	class GradeLowHighException : public std::exception
+	class GradeTooLowException : public std::exception
 	{
 		public:
 			const char *what() const throw();
@@ -50,5 +50,7 @@ class Form
 	
 	void	beSigned(Bureaucrat &b);
 };
+
+std::ostream	&operator<<(std::ostream &out, const Form &form);
 
 #endif

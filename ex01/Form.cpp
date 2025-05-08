@@ -19,7 +19,7 @@ Form::Form(std::string name, const int signGrade, const int executeGrade) : _nam
 	if (this->_executeGrade < 1 || this->_signGrade < 1)
 		throw GradeTooHighException();
 	else if (this->_executeGrade > 150 || this->_signGrade > 150)
-		throw GradeLowHighException();
+		throw GradeTooLowException();
 }
 
 Form::~Form()
@@ -70,7 +70,7 @@ const char *Form::GradeTooHighException::what() const throw()
 	return ("Grade Too High");
 }
 
-const char *Form::GradeLowHighException::what() const throw()
+const char *Form::GradeTooLowException::what() const throw()
 {
 	return ("Grade Too Low");
 }
@@ -79,11 +79,20 @@ void	Form::beSigned(Bureaucrat &b)
 {
 	if (b.getGrade() > this->getSignGrade())
 	{
-		throw GradeLowHighException();
+		throw GradeTooLowException();
 	}
 	else
 	{
-		//std::cout << "Signed successfully" << std::endl;
 		this->_signed = true;
 	}
+}
+
+std::ostream	&operator<<(std::ostream &out, const Form &form)
+{
+	out << form.getName();
+	out << ", sign grade => ";
+	out << form.getSignGrade();
+	out << ", execute grade => ";
+	out << form.getExecuteGrade();
+	return (out);
 }

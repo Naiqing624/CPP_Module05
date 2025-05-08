@@ -17,7 +17,7 @@
 #include <ctime>
 
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
-	: AForm("PresidentialPardonForm", target, 75, 45)
+	: AForm("PresidentialPardonForm", target, 25, 5)
 {
 }
 

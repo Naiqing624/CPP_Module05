@@ -21,6 +21,7 @@ int	main(void)
 		Bureaucrat	p1("Michael", 50);
 		std::cout << p1 << std::endl;
 		Form		f1("Document", 20, 20);
+		std::cout << f1 << std::endl;
 		p1.signForm(f1);
 	}
 	catch (std::exception &e)
@@ -30,9 +31,10 @@ int	main(void)
 	/*------------Second test---------------*/
 	try
 	{
-		Bureaucrat	p2("Michael", 30);
+		Bureaucrat	p2("Michael", 29);
 		std::cout << p2 << std::endl;
-		Form		f2("Document", 29, 1);
+		Form		f2("Document", 30, 1);
+		std::cout << f2 << std::endl;
 		p2.signForm(f2);
 	}
 	catch (std::exception &e)

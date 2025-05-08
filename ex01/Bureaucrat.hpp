@@ -21,7 +21,7 @@ class Bureaucrat
 {
 	private:
 	const std::string	_name;
-	int					_grade;
+	int			_grade;
 
 	public:
 	Bureaucrat(const std::string name, int grade);
@@ -31,8 +31,8 @@ class Bureaucrat
 	
 	const std::string	&getName() const;
 	int		getGrade() const;
-	void	increGrade(int num);
-	void	decreGrade(int num);
+	void	increGrade();
+	void	decreGrade();
 
 	class GradeTooHighException : public std::exception 
 	{
