@@ -24,30 +24,52 @@ int	main(void)
 
     std::cout << "===== ShrubberyCreationForm =====" << std::endl;
     AForm* f1 = intern.makeForm("shrubbery creation", "Garden");
-    if (f1)
-    {
-        boss.signForm(*f1);
-        boss.executeForm(*f1);
-        delete f1;
-    }
+	try
+	{
+		    if (f1)
+		    {
+		        boss.signForm(*f1);
+		        boss.executeForm(*f1);
+		        delete f1;
+		    }
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
     std::cout << "\n===== RobotomyRequestForm =====" << std::endl;
-    AForm* f2 = intern.makeForm("robotomy request", "Bender");
-    if (f2)
-    {
-        boss.signForm(*f2);
-        boss.executeForm(*f2);
-        delete f2;
-    }
+	try
+	{
+		    AForm* f2 = intern.makeForm("robotomy request", "Bender");
+		    if (f2)
+		    {
+		        boss.signForm(*f2);
+		        boss.executeForm(*f2);
+		        delete f2;
+		    }
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 
     std::cout << "\n===== PresidentialPardonForm =====" << std::endl;
-    AForm* f3 = intern.makeForm("presidential pardon", "Trillian");
-    if (f3)
-    {
-        boss.signForm(*f3);
-        boss.executeForm(*f3);
-        delete f3;
-    }
+	try
+	{
+		    AForm* f3 = intern.makeForm("presidential pardon", "Trillian");
+		    if (f3)
+		    {
+		        boss.signForm(*f3);
+		        boss.executeForm(*f3);
+		        delete f3;
+		    }
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
 
     std::cout << "\n===== Form no exist =====" << std::endl;
 	try
