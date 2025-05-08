@@ -23,9 +23,9 @@ int	main(void)
     Bureaucrat boss("Aslan", 1); 
 
     std::cout << "===== ShrubberyCreationForm =====" << std::endl;
-    AForm* f1 = intern.makeForm("shrubbery creation", "Garden");
 	try
 	{
+			AForm* f1 = intern.makeForm("shrubbery creation", "Garden");
 		    if (f1)
 		    {
 		        boss.signForm(*f1);
